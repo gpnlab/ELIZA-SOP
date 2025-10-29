@@ -1,0 +1,16 @@
+title: "ELIZA SOP"
+description: "SSH Setup for Open WebUI Access"
+# Use a GitHub Pages-supported theme
+theme: minima
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Clean permalinks by default
+permalink: /:path/
+
+# Prevent Jekyll from processing files you don't want
+exclude:
+  - node_modules

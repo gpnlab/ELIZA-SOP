@@ -1,7 +1,19 @@
+---
+title: Usage
+layout: default
+permalink: /usage/
+---
+
 # Usage
 
-# Chat
+This page describes how to use the ELIZA Open WebUI after setup. Add sections for:
 
-# Knowledge/Context/Retrieval Augmented Generation
+- Accessing the web UI (local tunnel, direct IP)
+- Adding documents to Open WebUI
+- Common commands and service checks
 
-# Model Context Protocol
+## Features
+
+- Chat
+- Knowledge/Context/Retrieval Augmented Generation
+- Model Context Protocol
