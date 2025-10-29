@@ -14,9 +14,9 @@
         }
 
         header {
-            background: #0b5;
+            background: #003594;
             padding: 12px 20px;
-            color: #040;
+            color: #ffffff;
         }
 
         nav {
@@ -26,7 +26,7 @@
         }
 
         nav a {
-            color: #033;
+            color: rgb(4, 2, 91);
             text-decoration: none;
             font-weight: 600
         }
@@ -54,13 +54,22 @@
 <body>
     <header>
         <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-            <div class="brand"><a href="/" style="color:inherit;text-decoration:none;">{{ site.title }}</a></div>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/setup/">Setup</a>
-                <a href="/usage/">Usage</a>
-                <a href="/README.md" style="font-weight:400;">Raw README</a>
-            </nav>
+            <div style="display:flex;align-items:center;gap:16px;">
+                <div class="brand"><a href="{{ '/' | relative_url }}" style="color:inherit;text-decoration:none;">{{
+                        site.title }}</a></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <nav>
+                    <a href="{{ '/' | relative_url }}">Home</a>
+                    <a href="{{ '/setup/' | relative_url }}">Setup</a>
+                    <a href="{{ '/usage/' | relative_url }}">Usage</a>
+                </nav>
+                <a href="{{ '/assets/icon.png' | relative_url }}" title="Assets">
+                    <img src="{{ '/assets/icon.png' | relative_url }}" alt="icon"
+                        onerror='this.onerror=null;this.src={{ "/assets/icon.svg" | relative_url | jsonify }}'
+                        style="width:36px;height:36px;border-radius:6px;object-fit:cover;border:1px solid rgba(0,0,0,0.06);">
+                </a>
+            </div>
         </div>
     </header>
 

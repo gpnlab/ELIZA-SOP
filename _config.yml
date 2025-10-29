@@ -3,6 +3,10 @@ description: "SSH Setup for Open WebUI Access"
 # Use a GitHub Pages-supported theme
 theme: minima
 
+# When serving as a project site, set baseurl to the repository name so links
+# like {{ '/setup/' | relative_url }} resolve to /ELIZA-SOP/setup/ on GitHub Pages.
+baseurl: "/ELIZA-SOP"
+
 # Markdown settings
 markdown: kramdown
 kramdown:
