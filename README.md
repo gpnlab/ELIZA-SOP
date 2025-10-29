@@ -27,6 +27,7 @@ exit
 ```
 
 ### 2. Access Open WebUI via SSH Tunneling
+ 
 If you cannot access Open WebUI directly through a browser:
 ```bash
 ssh -L 8080:localhost:8080 username@oac-eliza.oac.pitt.edu
@@ -67,13 +68,11 @@ If the SSH key is not being used (i.e. you are still prompted to enter a passwor
     ```
 
 ## Troubleshooting
-| Issue                     | Solution                                                                                             |
-| ------------------------- | ---------------------------------------------------------------------------------------------------- |
-| "Connection refused"      | Verify Remote Login is enabled in System Settings > Sharing                                          |
-| "Permission denied"       | Check username and password, or verify SSH key is properly set up                                    |
-| Can't find IP address     | Check network settings on Eliza or use `ifconfig` on Eliza                                           |
-| Open WebUI not accessible | Confirm service is running with `ps aux                                          \| grep open-webui` |
-| Firewall blocking SSH     | Check macOS Firewall settings in System Settings > Privacy & Security > Firewall                     |
+- "Connection refused": Verify Remote Login is enabled in System Settings > Sharing.
+- "Permission denied": Check username and password, or verify SSH key is properly set up.
+- Can't find IP address: Check network settings on Eliza or use `ifconfig` on Eliza.
+- Open WebUI not accessible: Confirm the service is running with `ps aux | grep open-webui`.
+- Firewall blocking SSH: Check macOS Firewall settings in System Settings > Privacy & Security > Firewall.
 
 ## Maintenance
 - **Regularly update SSH configuration** to maintain security
@@ -109,3 +108,11 @@ If the SSH key is not being used (i.e. you are still prompted to enter a passwor
 - [SSH Security Best Practices](https://www.ssh.com/ssh/best-practices)
 
 This SOP should be reviewed quarterly and updated as needed to reflect changes in SSH configuration or security policies.
+
+# Contributing To This Document
+Contributions to this SOP are welcome. Please follow these guidelines when contributing:
+- Fork the repository and create a new branch for your changes.
+- Submit a pull request with a clear description of the changes made.
+- Ensure all changes are reviewed and approved before merging.
+- Merge Requests should be reviewed by at least one other team member before merging.
+- The GitHub Pages will automatically update upon merging.
