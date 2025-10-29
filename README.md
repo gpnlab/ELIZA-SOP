@@ -67,13 +67,13 @@ If the SSH key is not being used (i.e. you are still prompted to enter a passwor
     ```
 
 ## Troubleshooting
-| Issue                     | Solution                                                                                             |
-| ------------------------- | ---------------------------------------------------------------------------------------------------- |
-| "Connection refused"      | Verify Remote Login is enabled in System Settings > Sharing                                          |
-| "Permission denied"       | Check username and password, or verify SSH key is properly set up                                    |
-| Can't find IP address     | Check network settings on Eliza or use `ifconfig` on Eliza                                           |
-| Open WebUI not accessible | Confirm service is running with `ps aux                                          \| grep open-webui` |
-| Firewall blocking SSH     | Check macOS Firewall settings in System Settings > Privacy & Security > Firewall                     |
+| Issue                     | Solution                                                                         |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| "Connection refused"      | Verify Remote Login is enabled in System Settings > Sharing                      |
+| "Permission denied"       | Check username and password, or verify SSH key is properly set up                |
+| Can't find IP address     | Check network settings on Eliza or use `ifconfig` on Eliza                       |
+| Open WebUI not accessible | Confirm service is running with `ps aux                                          | grep open-webui` |
+| Firewall blocking SSH     | Check macOS Firewall settings in System Settings > Privacy & Security > Firewall |
 
 ## Maintenance
 - **Regularly update SSH configuration** to maintain security
