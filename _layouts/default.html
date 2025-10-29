@@ -64,10 +64,11 @@
                     <a href="{{ '/setup/' | relative_url }}">Setup</a>
                     <a href="{{ '/usage/' | relative_url }}">Usage</a>
                 </nav>
-                <a href="{{ '/assets/icon.png' | relative_url }}" title="Assets">
+                <a href="{{ '/assets/icon.png' | relative_url }}" title="Assets"
+                    style="display:inline-block;line-height:0;overflow:visible;">
                     <img src="{{ '/assets/icon.png' | relative_url }}" alt="icon"
                         onerror='this.onerror=null;this.src={{ "/assets/icon.svg" | relative_url | jsonify }}'
-                        style="width:50px;height:50px;border-radius:6px;object-fit:cover;border:1px solid rgba(0,0,0,0.06);">
+                        style="width:36px;height:36px;border-radius:6px;object-fit:contain;display:block;padding:2px;background:#fff;box-sizing:content-box;">
                 </a>
             </div>
         </div>
