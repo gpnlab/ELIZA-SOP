@@ -32,6 +32,20 @@
       sudo launchctl unload /Library/LaunchDaemons/org.docling.serve.plist
       sudo launchctl load /Library/LaunchDaemons/org.docling.serve.plist
       ```
+## Upgrading Ollama and Open WebUI
+- unload services before upgrading:
+  ```bash
+  sudo launchctl unload /Library/LaunchDaemons/com.ollama.daemon.plist
+  sudo launchctl unload /Library/LaunchDaemons/com.openwebui.daemon.plist
+  ```
+- Ollama:
+  - download the dmg from [Ollama Releases](https://ollama.com/download) and follow installation instructions.
+- Open WebUI:
+  ```bash
+  # upgrade using pip
+  pip3.11 install --upgrade open-webui
+  sudo launchctl load /Library/LaunchDaemons/com.openwebui.daemon.plist
+  ```
 
 ## References
 - [Apple Support: Enable Remote Login](https://support.apple.com/en-us/HT201717)

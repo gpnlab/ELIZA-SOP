@@ -14,6 +14,6 @@ This page contains setup instructions for the ELIZA Open WebUI environment. Expa
 
 ## Services to check
 
-- Ollama
+- Ollama on port 11434
 - Open-WebUI
 - Docling-serve
