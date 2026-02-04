@@ -1,10 +1,23 @@
 # Troubleshooting
-- "Connection refused": Verify Remote Login is enabled in System Settings > Sharing.
-- "Permission denied": Check username and password, or verify SSH key is properly set up.
-- Can't find IP address: Check network settings on Eliza or use `ifconfig` on Eliza.
-- Open WebUI not accessible: Confirm the service is running with `ps aux | grep open-webui`.
-- Firewall blocking SSH: Check macOS Firewall settings in System Settings > Privacy & Security > Firewall.
 
+1. Check the logs for more details:
+  ```bash
+  tail -n 100 /var/log/ollama.stderr.log
+  tail -n 100 /var/log/ollama.stdout.log
+  tail -n 100 /var/log/openwebui/open-webui.stderr.log
+  tail -n 100 /var/log/openwebui/open-webui.stdout.log
+  ```
+2. Ollama not responding: Restart the Ollama service:
+  ```bash
+  sudo launchctl unload /Library/LaunchDaemons/com.ollama.daemon.plist
+  sudo launchctl load /Library/LaunchDaemons/com.ollama.daemon.plist
+  ```
+3. Open WebUI not accessible: Confirm the service is running with `ps aux | grep open-webui`.
+4. "Connection refused": Verify Remote Login is enabled in System Settings > Sharing.
+5. "Permission denied": Check username and password, or verify SSH key is properly set up.
+6. Can't find IP address: Check network settings on Eliza or use `ifconfig` on Eliza.
+
+7. Firewall blocking SSH: Check macOS Firewall settings in System Settings > Privacy & Security > Firewall.
 # Maintenance
 - **Regularly update SSH configuration** to maintain security
 - **Monitor SSH access logs**:
