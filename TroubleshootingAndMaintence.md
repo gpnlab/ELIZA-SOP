@@ -1,5 +1,14 @@
 # Troubleshooting
 
+## Restart Protocol
+When restarting the machine please check the following items:
+- The device is connected to the internet
+- globalprotect is running
+- ollama is running
+- openwebui is starting 
+
+## General Troubleshooting
+
 1. Check the logs for more details:
   ```bash
   tail -n 100 /var/log/ollama.stderr.log
